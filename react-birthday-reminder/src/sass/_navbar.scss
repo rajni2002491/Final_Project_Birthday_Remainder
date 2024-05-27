@@ -1,0 +1,117 @@
+/* NAVBAR */
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--clr-grey-9);
+	padding: 3rem 7rem;
+
+	@include respond-max($bp-large) {
+		padding: 3rem 5rem;
+	}
+
+	@include respond-max($bp-small) {
+		padding: 3rem;
+	}
+
+	& h2 {
+		color: var(--clr-pink-3);
+		font-size: 3.2rem;
+
+		@include respond-max($bp-small) {
+			font-size: 2.5rem;
+		}
+
+		@include respond-max($bp-smallest) {
+			font-size: 2rem;
+		}
+	}
+
+	&__links {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@include respond-max($bp-medium) {
+			position: fixed;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			transform: translateX(100%);
+			opacity: 0;
+			height: 100vh;
+			width: 100%;
+			background-color: var(--clr-grey-9);
+			flex-direction: column;
+			align-items: center;
+			transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+		}
+	}
+
+	&__link:link,
+	&__link:visited {
+		color: var(--clr-pink-3);
+		font-size: 1.8rem;
+		font-weight: 500;
+		position: relative;
+
+		@include respond-max($bp-medium) {
+			font-size: 2.5rem;
+		}
+	}
+
+	&__link:not(:last-child) {
+		margin-right: 4rem;
+
+		@include respond-max($bp-medium) {
+			margin: 0 0 2rem 0;
+		}
+	}
+
+	&__hamburger-btn {
+		display: none;
+		@include respond-max($bp-medium) {
+			display: flex;
+
+			font-size: 3.5rem;
+			color: var(--clr-pink-3);
+			z-index: 10;
+			background-color: transparent;
+			border: none;
+		}
+	}
+}
+
+.current-link::before,
+.navbar__link:hover::before {
+	position: absolute;
+	content: '';
+	display: inline-block;
+	width: 100%;
+	height: 2.5px;
+	border-radius: 4px;
+	top: 2.9rem;
+	background-color: currentColor;
+	transform-origin: left;
+	animation: expandToRight 0.5s cubic-bezier(0.98, 0.01, 0, 1.31);
+
+	@include respond-max($bp-medium) {
+		top: 3.6rem;
+	}
+}
+
+/* NOTIFICATION */
+.notification {
+	display: inline-block;
+	position: absolute;
+	top: -0.5rem;
+	height: 1.5rem;
+	width: 1.5rem;
+	background-color: rgb(219, 47, 47);
+	border-radius: 4px;
+	font-weight: 500;
+	text-align: center;
+	font-size: 1.1rem;
+	color: #eee;
+}
