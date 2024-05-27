@@ -32,7 +32,7 @@ Open up a terminal and clone this repo:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/Ayon95/react-birthday-reminder.git
+$ git clone https://github.com/rajni2002491/event-reminder.git
 
 # Go into the repository
 $ cd react-birthday-reminder
