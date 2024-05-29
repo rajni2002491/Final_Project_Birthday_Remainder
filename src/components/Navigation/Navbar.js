@@ -29,7 +29,7 @@ function Navbar() {
 
 	return (
 		<nav className="navbar">
-			<h2>{currentUserDoc ? `Hello, ${currentUserDoc.username}` : 'Birthday Reminder'}</h2>
+			<h2>{currentUserDoc ? `Hello, ${currentUserDoc.username}` : 'CelebrateMate'}</h2>
 			{currentUser && (
 				<>
 					<NavLinks handleLogout={handleLogout} menuIsOpen={menuIsOpen} closeMenu={closeMenu} />

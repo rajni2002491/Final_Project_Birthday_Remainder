@@ -3,7 +3,7 @@
 Variables
 ===============
 */
-
+@use 'sass:math';
 :root {
 	/* dark shades of primary color*/
 	--clr-grey-1: hsl(212, 33%, 89%);
@@ -14,7 +14,8 @@ Variables
 	--clr-grey-6: hsl(209, 28%, 39%);
 	--clr-grey-7: hsl(209, 34%, 30%);
 	--clr-grey-8: hsl(211, 39%, 23%);
-	--clr-grey-9: hsl(209, 61%, 16%);
+	//--clr-grey-9: hsl(209, 61%, 16%);
+	--clr-grey-9: hsl(0, 0%, 0%);
 	--transition: all 0.3s linear;
 	--spacing: 0.1rem;
 	--radius: 0.25rem;
@@ -38,23 +39,35 @@ $bp-small: 560px;
 $bp-smallest: 370px;
 
 // MEDIA QUERY MANAGER
+/*
 @mixin respond-max($breakpoint) {
-	@media only screen and (max-width: #{$breakpoint / 16px}1em) {
-		@content;
-	}
+  @media only screen and (max-width: $breakpoint / 16 * 1em) {
+    @content;
+  }
 }
+
   
-/*@mixin respond-min($breakpoint) {
+@mixin respond-min($breakpoint) {
 	@media only screen and (min-width: $breakpoint / 16px * 1em) {
 		@content;
 	}
-}*/
-  
-@mixin respond-min($breakpoint) {
-	@media only screen and (min-width: #{$breakpoint / 16px}1em) {
-		@content;
-	}
 }
+*/
+
+
+@mixin respond-max($breakpoint) {
+  @media only screen and (max-width: #{math.div($breakpoint, 16)}em) {
+    @content;
+  }
+}
+
+
+@mixin respond-min($breakpoint) {
+  @media only screen and (min-width: #{math.div($breakpoint, 16)}em) {
+    @content;
+  }
+}
+
 /*
 =============== 
 Global Styles
