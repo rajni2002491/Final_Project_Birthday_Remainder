@@ -39,17 +39,22 @@ $bp-smallest: 370px;
 
 // MEDIA QUERY MANAGER
 @mixin respond-max($breakpoint) {
-	@media only screen and (max-width: $breakpoint / 16px * 1em) {
+	@media only screen and (max-width: #{$breakpoint / 16px}1em) {
 		@content;
 	}
 }
-
-@mixin respond-min($breakpoint) {
+  
+/*@mixin respond-min($breakpoint) {
 	@media only screen and (min-width: $breakpoint / 16px * 1em) {
 		@content;
 	}
+}*/
+  
+@mixin respond-min($breakpoint) {
+	@media only screen and (min-width: #{$breakpoint / 16px}1em) {
+		@content;
+	}
 }
-
 /*
 =============== 
 Global Styles
