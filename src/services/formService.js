@@ -2,30 +2,40 @@ import * as Yup from 'yup';
 
 // edit form object
 const editForm = {
-	title: 'Edit Birthday',
+	title: 'Edit Event',
 
 	formInputs: [
 		{ label: 'Name*', name: 'name', type: 'text' },
 		{ label: 'Month*', name: 'month', type: 'text', placeholder: 'e.g. Jan' },
 		{ label: 'Date*', name: 'date', type: 'text', placeholder: 'e.g. 14' },
 		{ label: 'Year', name: 'year', type: 'text', placeholder: 'e.g. 1996' },
+		//add new
+		{ label: 'Select Event*(Birthday/Anniversary)', name: 'event', type: 'select', options: ['Birthday', 'Anniversary'] },
 	],
 
-	buttonTexts: { disabled: 'Editing Birthday', idle: 'Edit Birthday' },
+	buttonTexts: { disabled: 'Editing Event', idle: 'Edit' },
 };
 
 // add form object
 const addForm = {
-	title: 'Add Birthday',
-
-	formInputs: [
+	//title: 'Add Birthday',
+	title: 'Add Event',
+	/*formInputs: [
 		{ label: 'Name*', name: 'name', type: 'text' },
 		{ label: 'Month*', name: 'month', type: 'text', placeholder: 'e.g. Jan' },
 		{ label: 'Date*', name: 'date', type: 'text', placeholder: 'e.g. 14' },
 		{ label: 'Year', name: 'year', type: 'text', placeholder: 'e.g. 1996' },
-	],
-
-	buttonTexts: { disabled: 'Adding Birthday', idle: 'Add Birthday' },
+	],*/
+	 formInputs: [
+		{ label: 'Name*', name: 'name', type: 'text' },
+		{ label: 'Month*', name: 'month', type: 'text', placeholder: 'e.g. Jan' },
+		{ label: 'Date*', name: 'date', type: 'text', placeholder: 'e.g. 14' },
+		{ label: 'Year', name: 'year', type: 'text', placeholder: 'e.g. 1996' },
+		{ label: 'Select Event*(Birthday/Anniversary)', name: 'event', type: 'dropdown', options: ['Birthday', 'Anniversary'] },
+	  ],
+	  
+     //Add Birthday idle change
+	buttonTexts: { disabled: 'Adding Birthday', idle: 'Add' },
 };
 
 // login form object

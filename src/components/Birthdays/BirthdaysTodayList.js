@@ -8,7 +8,7 @@ function BirthdaysTodayList({ peopleBirthdaysToday }) {
 	return (
 		<>
 			{birthdays.length === 0 ? (
-				<h3 className="container__title">No Birthdays Today</h3>
+				<h3 className="container__title">No Birthdays/Anniversary Today</h3>
 			) : (
 				<h3 className="container__title">
 					{birthdays.length} Birthday{birthdays.length > 1 ? 's' : ''} Today

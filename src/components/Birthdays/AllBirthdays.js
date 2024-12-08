@@ -35,7 +35,7 @@ function AllBirthdays() {
 			{people && (
 				<>
 					<h3 className="container__title">
-						You have {people.length === 0 ? 'No' : people.length} birthday
+						You have {people.length === 0 ? 'No' : people.length} Event
 						{people.length === 1 ? '' : 's'} saved
 					</h3>
 					<AllBirthdaysList currentPeople={currentPeople} />

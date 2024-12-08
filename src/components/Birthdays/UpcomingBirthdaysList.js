@@ -8,7 +8,7 @@ function UpcomingBirthdaysList({ peopleUpcomingBirthdays }) {
 	return (
 		<>
 			{template.length === 0 ? (
-				<h3 className="container__title">No Upcoming Birthdays</h3>
+				<h3 className="container__title">No Upcoming Birthdays/Anniversary</h3>
 			) : (
 				<h3 className="container__title">
 					{template.length} Upcoming Birthday{template.length > 1 ? 's' : ''}

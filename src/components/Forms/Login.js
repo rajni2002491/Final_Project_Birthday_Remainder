@@ -3,7 +3,8 @@ import { Link, useHistory } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext.js';
 import { Formik } from 'formik';
 import formService from '../../services/formService.js';
-import FormComponent from './FormComponent';
+import FormComponent from '../Forms/FormComponent';
+
 
 function Login() {
 	const [loggingIn, setLoggingIn] = useState(false);
